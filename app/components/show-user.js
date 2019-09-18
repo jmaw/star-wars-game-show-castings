@@ -11,8 +11,10 @@ randomid:'',
 landscapemode:false,
 
 setWW(mode,device,width,height){    
-    // Desktops are always in landscape
-    if (device == 'desktop-laptop'){
+    // Desktops and tablets are always in landscape
+    if (device == 'desktop-laptop' || 
+        device == 'ipad' ||
+        device == 'android-tablet'){
         this.set('landscapemode',true);
     }
     else{

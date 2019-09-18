@@ -40,11 +40,9 @@ module.exports = function(defaults) {
   app.import('vendor/mdb/js/mdb.pro.min.js');
   // MDB BOOTSTRAP PRO 4.5.3:END
 
-  //TOASTR: BEGIN
-  app.import('vendor/toastr/toastr.min.css');
-  app.import('vendor/toastr/toastr.min.js');
-  app.import('vendor/toastr/sweetalert.min.js');
-  //TOASTR: END 
+  //SWEETALERT: BEGIN
+  app.import('vendor/sweet/sweetalert.min.js');
+  //SWEETALERT: END 
 
   return app.toTree(); 
 };
