@@ -37,7 +37,7 @@ created, modify the contestants information and delete any of the contestants it
 * Contestants email field is fully functional.
 
 ## Reading and Caching SWAPI (Star Wars API)
-
+```
 characters:[],
 
 _LoadCharacters(page){
@@ -67,7 +67,7 @@ getCharacters(){
    var c = window.localStorage.getItem('characters');
    return c.split(',');
 },
-
+```
 
 ## Technology used
 
