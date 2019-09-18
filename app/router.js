@@ -7,6 +7,14 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('manager-profile');
+  this.route('manager-dashboard');
+  this.route('manager-dashboard-new');
+  this.route('manager-dashboard-edit');
+  this.route('sign-in');
+  this.route('sign-up');
+
+  this.route('page-not-found', { path: '/*path'});
 });
 
 export default Router;

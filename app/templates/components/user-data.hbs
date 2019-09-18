@@ -1,0 +1,66 @@
+<div class="container">
+		<form class="border border-light mt-3 shadow p-3 mb-3 smooth-scrollx">
+
+		    <p class="h4 mb-4 text-center"><b>{{title}}</b></p>
+
+
+		    {{#unless new}}
+
+		       <div class="card mb-3">
+		          <div class="card-header text-center">
+				     <img class="img-fluid " style="height:240px;height:240px" src={{photo}}>
+				  </div>
+				  <div class="text-center mt-3">
+		          {{upload-file filetype='image' uid=userid setaction='setPicture'}}
+		          </div>
+		       </div>
+		    {{/unless}}
+
+		    <label for="firstName"><small>First Name</small></label>
+			{{input type="text" id="firstName" class="form-control mb-2" value=firstname}} 
+
+		    <label for="lastName"><small>Last Name</small></label>
+			{{input type="text" id="lastName" class="form-control mb-2" value=lastname}} 
+
+
+            <label for="date-of-birth"><small>Date of Birth</small></label> 
+			<input id="date-of-birth" type="text"  class="form-control datepicker mb-2"   
+			         onchange={{action 'updateDate' value='target.value'}}>
+
+		    <label for="mobilePhone"><small>Mobile Phone</small></label>
+			{{input type="text" id="mobilePhone" class="form-control mb-2" value=phone}} 
+
+		    <label for="eMail"><small>Email</small></label>
+			{{input type="text" id="eMail" class="form-control mb-2" value=email}} 
+
+            
+		    <select id="resCountry" class="mdb-select mb-2" value={{country}} 			            
+		            onchange={{action 'updateCountry' value='target.value'}}>		      
+                 <option value="" disabled selected>Choose your residence country</option>              
+              {{#each countries as |c|}}
+			      <option value="{{c.name}}">{{c.name}}</option>
+			  {{/each}}
+			</select>
+ 
+
+            {{#if contestant}}
+                
+                <label for="swChar"><small>Star Wars Character</small></label>
+			    <select id="swChar" class="mdb-select" value={{character}} 
+			            onchange={{action 'updateCharacter' value='target.value'}}>			      
+			         <option value="" disabled selected>Choose your character</option>			      
+				  {{#each characters as |c|}}
+				      <option value="{{c}}">{{c}}</option>
+				  {{/each}}
+				</select>				
+
+	        {{/if}}
+
+            <div class="text-center">
+              <a href="/manager-dashboard" class="btn btn-secondary my-4">Cancel</a>
+              <button class="btn btn-primary  my-4" {{action 'saveData'}} disabled={{isSaveButtonDisabled}}>Save</button>	      
+		    </div>
+
+		</form>
+</div>
+

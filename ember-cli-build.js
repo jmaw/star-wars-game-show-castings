@@ -5,6 +5,11 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    fingerprint: {
+        exclude: ['images/']
+    },
+    hinting: false,
+    storeConfigInMeta: false    
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -20,5 +25,26 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+// MDB BOOTSTRAP PRO 4.5.3:BEGIN 
+  app.import('vendor/mdb/css/bootstrap.min.css');
+  app.import('vendor/mdb/css/mdb.min.css');
+  app.import('vendor/mdb/css/style.css');
+  
+
+  app.import('vendor/mdb/css/mdb.pro.min.css');
+  app.import('vendor/mdb/js/jquery-3.3.1.min.js');
+       
+  app.import('vendor/mdb/js/popper.min.js');
+  app.import('vendor/mdb/js/mdb.min.js');
+  
+  app.import('vendor/mdb/js/mdb.pro.min.js');
+  // MDB BOOTSTRAP PRO 4.5.3:END
+
+  //TOASTR: BEGIN
+  app.import('vendor/toastr/toastr.min.css');
+  app.import('vendor/toastr/toastr.min.js');
+  app.import('vendor/toastr/sweetalert.min.js');
+  //TOASTR: END 
+
+  return app.toTree(); 
 };

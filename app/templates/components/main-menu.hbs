@@ -1,0 +1,88 @@
+<!--Navbar -->
+<nav id="main-menu" class="navbar navbar-expand-lg navbar-dark elegant-color fixed-top">
+    <ul class="navbar-nav mr-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light button-collapse"  data-activates="slide-out">
+            <i class="fa fa-lg fa-bars"></i>
+          </a>
+        </li>
+         
+        <li>
+           <a href="/"><h5 class="text-white mt-2" style="font-family:Rubik,serif!important;">Star Wars Castings</h5></a>
+        </li>        
+    </ul>    
+    <div class="float-right">
+       <div class="row">
+        <img src="/assets/images/soldier.png" style="width:32px!important" class="mr-3 img-fluid {{if progress 'animated infinite rotateIn' ''}}">    
+        {{#if canAdd}}
+           <a href="/manager-dashboard-new" class="waves-effect text-white">
+                <i class="fa fa-lg fa-plus mr-3" style="color:#FFFFFF"></i>              
+           </a>
+        {{/if}}
+        </div>
+    </div>
+</nav>
+<!--/.Navbar -->
+<!-- Sidebar -->
+<div id="slide-out" class="poppins14 side-nav elegant-color custom-scrollbar w-{{sbw}}">
+    <div class="row elegant-color-dark">  
+       <div class="col-12 text-center">
+            <p><img src="/assets/images/soldier.png" style="width:64px!important" class="rounded-circle mt-5 img-fluid"></p>        
+            <p class="flow-text text-white">Star Wars Castings</p> 
+            <p></p>
+       </div>        
+    </div>
+    
+    <ul class="custom-scrollbar" >
+        <!-- Side navigation links -->
+        <li>
+            <ul class="list-unstyled">
+
+            <li>
+               <a href="/" class="waves-effect text-white"><i class="fa fa-lg fa-home text-info" ></i> <span class="flow-text">Home</span></a>
+            </li>
+
+
+            {{#if session.content.isAuthenticated}}
+
+                <!--
+                <li>
+                   <a href="/verify-email" class="waves-effect text-white"><i class="fa fa-lg fa-envelope text-info" ></i> <span class="flow-text">Verify Email</span></a>
+                </li>
+                -->    
+                <li>
+                   <a href="/manager-dashboard" class="waves-effect text-white"><i class="fa fa-lg fa-tachometer-alt text-info" ></i> <span class="flow-text">Dashboard</span></a>
+                </li>
+
+                <li>
+                   <a href="/manager-profile" class="waves-effect text-white"><i class="fa fa-lg fa-user-circle text-info" ></i> <span class="flow-text">Profile</span></a>
+                </li>
+
+                
+                <li>
+                   <a class="waves-effect text-white" {{action 'quitConfirm'}}><i class="fa fa-lg fa-sign-out-alt text-danger" ></i> <span class="flow-text">Sign-out</span></a>
+                </li>
+
+
+            {{else}}
+
+                <li>
+                   <a href="/sign-in" class="waves-effect text-white"><i class="fa fa-lg fa-sign-in-alt text-info" ></i> <span class="flow-text">Sign-In</span></a>
+                </li>
+
+                <li>
+                   <a href="/sign-up" class="waves-effect text-white"><i class="fa fa-lg fa-user-plus text-info" ></i> <span class="flow-text">Sign-Up</span></a>
+                </li>
+
+
+            {{/if}}
+
+            </ul>
+        </li>
+        <!--/. Side navigation links -->
+    </ul>
+    <div class="sidenav-bg mask-strong"></div>
+</div>
+<!-- Sidebar -->
+
+{{yield}}

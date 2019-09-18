@@ -1,0 +1,294 @@
+
+/*
+  Sizes W
+*/
+
+.w-5 {
+  width:5%!important;
+}
+
+.w-10 {
+  width:10%!important;
+}
+
+.w-15 {
+  width:15%!important;
+}
+
+.w-20 {
+  width:20%!important;
+}
+
+.w-25 {
+  width:25%!important;
+}
+
+.w-30 {
+  width:30%!important;
+}
+
+.w-35 {
+  width:35%!important;
+}
+
+.w-40 {
+  width:40%!important;
+}
+
+.w-45 {
+  width:45%!important;
+}
+
+.w-80 {
+ width:80%!important; 
+}
+
+
+.w-90 {
+ width:90%!important; 
+}
+
+
+/* Radio Buttons */
+
+.form-check-input[type="radio"] + label:before
+{
+   border: 2px solid #004d40; /* #4285f4; */
+}
+
+.form-check-input[type="radio"]:checked + label:after,
+.form-check-input[type="radio"].with-gap:checked + label:before,
+.form-check-input[type="radio"].with-gap:checked + label:after,
+label.btn input[type="radio"]:checked + label:after,
+label.btn input[type="radio"].with-gap:checked + label:before,
+label.btn input[type="radio"].with-gap:checked + label:after 
+{
+   border: 2px solid #004d40; /* #4285f4; */
+}
+
+.form-check-input[type="radio"]:checked + label:after,
+.form-check-input[type="radio"].with-gap:checked + label:after,
+label.btn input[type="radio"]:checked + label:after,
+label.btn input[type="radio"].with-gap:checked + label:after 
+{
+   background-color:#004d40; /* #4285f4; */
+}
+
+/* Making all cards same height */
+
+.dropdown-menu > a:hover, .dropdown-menu > a:focus {
+  background-color: #16A170 !important; 
+  background-image: linear-gradient(to bottom, #FFFFFF, #17AA76) !important;
+  background-repeat: repeat-x !important;
+  color: #FFFFFF;
+  outline: 0 none;
+  text-decoration: none;
+}
+
+.dropdown-menu > .active {
+  background-color: #1b5e20 !important;
+  background-image: linear-gradient(to bottom, #1b5e20, #1b5e20) !important;
+  background-repeat: repeat-x !important;
+  color: #FFFFFF!important;
+  outline: 0 none;
+  text-decoration: none;
+}
+
+.xcard-image{
+    height: 640px; /* Your height here */
+    overflow: hidden;
+}
+
+.plain-card {
+    border: none!important;
+    box-shadow: none!important;  
+}
+
+.scroll-area {
+   /* width: 100%;*/
+    height:350px;
+    text-align: justify;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.tabbable  {
+    overflow-x: auto;
+    overflow-y:hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+ }
+
+.poppins{
+    font-family:Poppins,serif!important;
+}
+
+.poppins14{
+  font-family:Poppins,serif!important;
+  font-size: 14px;
+}
+
+.poppins16{
+  font-family:Poppins,serif!important;
+  font-size: 16px;
+}
+
+
+.apple-device {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+/*
+::-webkit-scrollbar {
+    width:  5px!important;
+    height: 3px!important;
+    padding-left:10px!important;
+}
+*/
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+/* FLOW TEXT */
+
+@media only screen and (min-width: 360px) {
+    .flow-text {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media only screen and (min-width: 390px) {
+    .flow-text {
+      font-size: 1.224rem;
+    }
+  }
+  
+  @media only screen and (min-width: 420px) {
+    .flow-text {
+      font-size: 1.248rem;
+    }
+  }
+  
+  @media only screen and (min-width: 450px) {
+    .flow-text {
+      font-size: 1.272rem;
+    }
+  }
+  
+  @media only screen and (min-width: 480px) {
+    .flow-text {
+      font-size: 1.296rem;
+    }
+  }
+  
+  @media only screen and (min-width: 510px) {
+    .flow-text {
+      font-size: 1.32rem;
+    }
+  }
+  
+  @media only screen and (min-width: 540px) {
+    .flow-text {
+      font-size: 1.344rem;
+    }
+  }
+  
+  @media only screen and (min-width: 570px) {
+    .flow-text {
+      font-size: 1.368rem;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .flow-text {
+      font-size: 1.392rem;
+    }
+  }
+  
+  @media only screen and (min-width: 630px) {
+    .flow-text {
+      font-size: 1.416rem;
+    }
+  }
+  
+  @media only screen and (min-width: 660px) {
+    .flow-text {
+      font-size: 1.44rem;
+    }
+  }
+  
+  @media only screen and (min-width: 690px) {
+    .flow-text {
+      font-size: 1.464rem;
+    }
+  }
+  
+  @media only screen and (min-width: 720px) {
+    .flow-text {
+      font-size: 1.488rem;
+    }
+  }
+  
+  @media only screen and (min-width: 750px) {
+    .flow-text {
+      font-size: 1.512rem;
+    }
+  }
+  
+  @media only screen and (min-width: 780px) {
+    .flow-text {
+      font-size: 1.536rem;
+    }
+  }
+  
+  @media only screen and (min-width: 810px) {
+    .flow-text {
+      font-size: 1.56rem;
+    }
+  }
+  
+  @media only screen and (min-width: 840px) {
+    .flow-text {
+      font-size: 1.584rem;
+    }
+  }
+  
+  @media only screen and (min-width: 870px) {
+    .flow-text {
+      font-size: 1.608rem;
+    }
+  }
+  
+  @media only screen and (min-width: 900px) {
+    .flow-text {
+      font-size: 1.632rem;
+    }
+  }
+  
+  @media only screen and (min-width: 930px) {
+    .flow-text {
+      font-size: 1.656rem;
+    }
+  }
+  
+  @media only screen and (min-width: 960px) {
+    .flow-text {
+      font-size: 1.68rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .flow-text {
+      font-size: 1.2rem;
+    }
+  }
+  

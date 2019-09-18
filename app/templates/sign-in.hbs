@@ -1,0 +1,28 @@
+<div class="container">
+	<form class="border border-light mt-5 shadow p-4">
+
+	    <p class="h4 mb-4 text-center">Sign in</p>
+
+        <label for="loginEmail"><small>Email</small></label> 
+	    {{input type="email" id="loginEmail" class="form-control mb-4" value=email}}
+
+        <label for="loginPass"><small>Password</small></label> 
+	    {{input type="password" id="loginPass" class="form-control mb-4" value=password}}
+
+        {{#if (eq fails 0)}}    
+            <div class="p-2">
+            {{g-recaptcha onSuccess=(action "onCaptchaResolved")
+                                  ref=(mut gRecaptcha)}} 
+            </div>                      
+        {{/if}} 
+
+
+	    <div class="text-center">
+	        <button class="btn my-4 btn-primary" {{action 'signIn'}} disabled={{isSignInButtonDisabled}}>Sign in</button>
+	        <p>Not a casting manager?
+	            <a href="/sign-up">Register</a>
+	        </p>
+	    </div>
+	</form>
+</div>
+

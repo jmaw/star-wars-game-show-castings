@@ -1,0 +1,34 @@
+<div class="container">
+		<form class="border border-light mt-4 mb-3 shadow p-3 smooth-scroll">
+
+		    <p class="h4 mb-4 text-center">Sign up</p>
+
+            <label for="newFirstName"><small>First Name</small></label>  
+	        {{input type="text" id="newFirstName" class="form-control mb-4" value=firstname}}
+
+            <label for="newLastName"><small>Last Name</small></label> 
+	        {{input type="text" id="newLastName" class="form-control mb-4" value=lastname}}
+
+            <label for="newEmail"><small>Email</small></label> 
+		    {{input type="email" id="newEmail" class="form-control mb-4" value=email}}
+
+            <label for="newPassword1"><small>Password</small></label> 
+		    {{input type="password" id="newPassword1" class="form-control mb-4" value=password1}}
+
+            <label for="newPassword2"><small>Retype Password</small></label> 
+		    {{input type="password" id="newPassword2" class="form-control mb-4" value=password2}}
+	       
+	        {{g-recaptcha onSuccess=(action "onCaptchaResolved")
+	                                  ref=(mut gRecaptcha)}} 
+	        
+
+		    <button class="btn btn-primary btn-block my-4" {{action 'signUp'}} disabled={{isSignUpButtonDisabled}}>Sign up</button>
+
+		    <div class="text-center">
+		        <p>Are you a casting manager?
+		            <a href="/sign-in">Sign In</a>
+		        </p>
+		    </div>
+		</form>
+</div>
+

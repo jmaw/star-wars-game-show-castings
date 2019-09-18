@@ -1,0 +1,60 @@
+{{#if landscapemode}}
+
+  <div class="card w-100 mb-5 shadow">
+      <div class="card-body">
+          <div class="row">
+              <div class="col-3 text-center">
+                <img class="card-img-top w-100 mt-3" src={{user.photo}}>            
+              </div>
+              <div class="col-7">
+                <h5 class="font-weight-bold card-title"><i class="fa fa-user-circle pink-text"></i> {{user.firstname}} {{user.lastname}}</h5>
+                
+                <p><i class="fa fa-envelope fa-lg text-primary"></i> <a href="mailto:{{user.email}}">{{user.email}}</a></p>
+                <p ><i class="fa fa-phone fa-lg text-primary"></i> <a href="tel:{{user.phone}}">{{user.phone}}</a></p>
+                <p><i class="fa fa-birthday-cake fa-lg text-primary"></i> {{user.birthday}}</p>
+                <p><i class="fa fa-globe fa-lg text-primary"></i> {{user.country}}</p>
+                <p><i class="fa fa-theater-masks fa-lg text-primary"></i> {{user.character}}</p>              
+              </div>
+              <div class="col-2">
+                 <div class="row mb-3">
+                     <button class="btn btn-danger btn-block btn-md"  {{action 'verifyDelete' user.id user.firstname}}>Delete</button>       
+                 </div>
+                 <div class="row">
+                     <button class="btn btn-primary btn-block btn-md" {{action 'editUser' user.id}}>Edit</button>         
+                 </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+{{else}}
+
+  <div class="card card-cascade narrower mb-5">
+    <div class="view view-cascade overlay">
+      <img class="card-img-top" src={{user.photo}}>
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <div class="card-body card-body-cascade">
+      <h5 class="pink-text pb-2 pt-1"><i class="fa fa-user-circle"></i> User Info</h5>
+
+      <h4 class="font-weight-bold card-title">{{user.firstname}} {{user.lastname}}</h4>
+      <hr>
+      <p><i class="fa fa-envelope fa-lg text-primary"></i> <a href="mailto:{{user.email}}">{{user.email}}</a></p>
+      <p ><i class="fa fa-phone fa-lg text-primary"></i> <a href="tel:{{user.phone}}">{{user.phone}}</a></p>
+      <p><i class="fa fa-birthday-cake fa-lg text-primary"></i> {{user.birthday}}</p>
+      <p><i class="fa fa-globe fa-lg text-primary"></i> {{user.country}}</p>
+      <p><i class="fa fa-theater-masks fa-lg text-primary"></i> {{user.character}}</p>
+
+       <div class="row text-center">
+          <div class="col-12">
+            <button class="btn btn-danger"  {{action 'verifyDelete' user.id user.firstname}}>Delete</button>       
+            <button class="btn btn-primary" {{action 'editUser' user.id}}>Edit</button>         
+          </div> 
+       </div>
+    </div>
+  </div>
+
+{{/if}}

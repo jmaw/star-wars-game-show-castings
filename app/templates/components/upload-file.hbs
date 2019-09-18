@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label class="btn btn-primary" for="my-file-selector">
+    <input id='my-file-selector' 
+           style='display:none;' 
+           type='file' disabled={{fileinprogress}} 
+           onchange={{action 'updateFile'}} 
+           accept={{acceptfile}}/>
+     {{#if fileinprogress}}
+        Loading... 
+     {{else}}
+        Browse for images
+     {{/if}}                 
+    </label>
+</div>            
